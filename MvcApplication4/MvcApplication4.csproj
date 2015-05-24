@@ -240,6 +240,11 @@
     <Content Include="Views\PLayers\Create.cshtml" />
     <Content Include="Views\PLayers\Edit.cshtml" />
     <Content Include="Views\PLayers\Delete.cshtml" />
+    <Content Include="Views\PLayers\SearchIndex.cshtml" />
+    <Content Include="Views\PLayers\SearchIndex2.cshtml" />
+    <Content Include="Views\PLayers\SearchIndex3.cshtml" />
+    <Content Include="Views\PLayers\SearchIndex4.cshtml" />
+    <Content Include="Views\PLayers\SearchIndex5.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

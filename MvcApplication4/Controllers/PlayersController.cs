@@ -119,5 +119,72 @@ namespace MvcApplication4.Controllers
             db.Dispose();
             base.Dispose(disposing);
         }
+
+        public ActionResult SearchIndex(string searchString)
+        {
+            var players = from p in db.Players
+                          select p;
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                players = players.Where(s => s.CName.Contains(searchString));
+            }
+
+            return View(players);
+        }
+
+        public ActionResult SearchIndex2(string id)
+        {
+            string searchString = id;
+            return this.SearchIndex(searchString);
+        }
+
+        public ActionResult SearchIndex3(string searchString)
+        {
+            return this.SearchIndex(searchString);
+        }
+
+        public ActionResult SearchIndex4(string searchString)
+        {
+            var players = from p in db.Players
+                          select p;
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                players = players.Where(s => s.CName.Contains(searchString));
+            }
+
+            return View(players);
+        }
+        [HttpPost]
+        public string SearchIndex4(FormCollection fc, string searchString)
+        {
+            return "<h3> From [HttpPost]SearchIndex4:" + searchString + "</h3>";
+        }
+
+        public ActionResult SearchIndex5(string playerMobile, string searchString)
+        {
+            var mobileList = new List<string>();
+            var mobileQuery = from p in db.Players
+                              orderby p.Mobile
+                              select p.Mobile;
+            mobileList.AddRange(mobileQuery.Distinct());
+            ViewBag.playerMobileList = new SelectList(mobileList);
+
+            var players = from p in db.Players
+                          select p;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                players = players.Where(s => s.CName.Contains(searchString));
+            }
+
+            if (string.IsNullOrEmpty(playerMobile))
+            {
+                return View(players);
+            }
+            else
+            {
+                return View(players.Where(s => s.Mobile == playerMobile));
+            }
+        }
     }
 }
