@@ -145,6 +145,14 @@
     <Compile Include="Migrations\201505250738510_AddRatingMig.Designer.cs">
       <DependentUpon>201505250738510_AddRatingMig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505250934396_AddDataAnnotationsMig.cs" />
+    <Compile Include="Migrations\201505250934396_AddDataAnnotationsMig.Designer.cs">
+      <DependentUpon>201505250934396_AddDataAnnotationsMig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505250955518_AddDataAnnotationsMig1.cs" />
+    <Compile Include="Migrations\201505250955518_AddDataAnnotationsMig1.Designer.cs">
+      <DependentUpon>201505250955518_AddDataAnnotationsMig1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -278,6 +286,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505250738510_AddRatingMig.resx">
       <DependentUpon>201505250738510_AddRatingMig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505250934396_AddDataAnnotationsMig.resx">
+      <DependentUpon>201505250934396_AddDataAnnotationsMig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505250955518_AddDataAnnotationsMig1.resx">
+      <DependentUpon>201505250955518_AddDataAnnotationsMig1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -16,7 +16,7 @@ namespace MvcApplication4.Models
         public string Email {get; set;}
         [StringLength(20)]
         public string Mobile { get; set; }
-        [StringLength(10)]
+        [StringLength(5,ErrorMessage="Ohoh!!!max length = 5")]
         public string Rating { get; set; }
     }
 
